@@ -1,0 +1,16 @@
+<div class="mb-5">
+  <div class="container border p-3">
+    <div class="w-100">
+      <img [src]="product.picture" class="img-thumbnail" alt="Cinque Terre">
+    </div>
+    <div (click)="viewProductDetails()" class="d-flex justify-content-center p-3" style="cursor: pointer;"> 
+      <h5>{{ product.title }}</h5>
+    </div>
+    <div class="d-flex justify-content-center pt-2 text-danger">
+      {{ product.price | currencyFormat }}
+    </div>
+  </div>
+  <div class="border pr-3 pl-3">
+    <app-add-to-cart-button [selectedProduct]="product"></app-add-to-cart-button>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="container m-5">
+  <h2>Cart totals</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">Subtotal</th>
+          <th scope="col">{{ subtotal | currencyFormat}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Shipping</th>
+          <td>Free Shipping</td>
+        </tr>
+        <tr>
+          <th scope="row">Total</th>
+          <th scope="col">{{ subtotal | currencyFormat}}</th>
+        </tr>
+      </tbody>
+    </table>
+</div>

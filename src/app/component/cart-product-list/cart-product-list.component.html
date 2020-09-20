@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col"></th>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productListInCart">
+        <th scope="row">1</th>
+        <td><img [src]="product.picture" style="width: 30px;" class="img-thumbnail" alt="Cinque Terre"></td>
+        <td class="text-info">{{ product.title }}</td>
+        <td>{{ product.price | currencyFormat }}</td>
+        <td>{{ product.stock }}</td>
+        <td>{{ product.subTotal | currencyFormat }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

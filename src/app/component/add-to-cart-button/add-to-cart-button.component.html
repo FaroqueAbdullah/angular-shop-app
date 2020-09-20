@@ -1,0 +1,10 @@
+<div class="m0 p0">
+  <div class="row" style="height: 40px;">
+      <button *ngIf="productQuantityInStock > 0" (click)="addToCart()" type="button" class="col-6 btn btn-outline-light text-dark">
+        <i class="fa fa-shopping-cart" aria-hidden="true">  Add to Cart</i>
+      </button>
+      <button *ngIf="productQuantityInCart > 0" (click)="viewCart()" type="button" class="btn btn-secondary col-6 bg-dark">
+        View Cart
+      </button>
+  </div>
+</div>

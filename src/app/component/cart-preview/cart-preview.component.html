@@ -1,0 +1,22 @@
+<div class="container">
+  <div *ngIf="productListInCart.length > 0" class="mt-3 border-bottom">
+    <div *ngFor="let product of productListInCart" class="mb-2">
+      <div class="row">
+        <div class="col-9 text-info">
+          {{ product.title }}
+        </div>
+        <div class="col-3">
+          <div class="w-100">
+            <img [src]="product.picture" class="img-thumbnail" alt="Cinque Terre">
+          </div>
+        </div>
+      </div>
+      <dv>
+        {{ product.stock }} * {{ product.price | currencyFormat }}
+      </dv>
+    </div>
+  </div>
+  <div *ngIf="productListInCart.length > 0" class="">
+    Subtotal: {{ subtotal | currencyFormat }}
+  </div>
+</div>

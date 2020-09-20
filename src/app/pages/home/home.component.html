@@ -1,0 +1,21 @@
+<div class="container-fluid m-3">
+  <div class="row">
+    <div class="col-9">
+      <div class="w-100">
+        <h1 class="font-weight-bold">Shop</h1>
+      </div>
+      <div class="w-100">
+        <app-sub-header (onDataSelect)="setSortingMethod($event)"></app-sub-header>
+      </div>
+      <div class="w-100">
+        <app-product-list></app-product-list>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="w-100">
+        <h5 class="font-weight-bold">Cart</h5>
+        <app-cart-preview></app-cart-preview>
+      </div>
+    </div>
+  </div>
+</div>

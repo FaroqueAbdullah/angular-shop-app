@@ -1,0 +1,30 @@
+<div class="container-fluid m-3">
+  <div class="row">
+    <div class="col-9">
+      <div class="row border-bottom pb-3">
+        <div class="col-4">
+          <img [src]="product.picture" class="img-thumbnail" alt="Cinque Terre">
+        </div>
+        <div class="col-8">
+          <h1>{{ product.title }}</h1>
+          <div class="d-flex justify-content-start pt-2 text-danger">
+            {{ product.price | currencyFormat }}
+          </div>
+          <app-add-to-cart-button [selectedProduct]="product"></app-add-to-cart-button>
+        </div>
+      </div>
+      <div>
+        <h1>Description</h1>
+        <div>
+          {{ product.description }}
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+      <div class="w-100">
+        <h5 class="font-weight-bold">Cart</h5>
+        <app-cart-preview></app-cart-preview>
+      </div>
+    </div>
+  </div>
+</div>
